@@ -1,0 +1,188 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #2a4b9b;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-width: 200px; /* Restriction de la taille du logo */
+  height: auto;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Prestations */
+.prestations {
+  text-align: center;
+  padding: 50px;
+  background-color: #f1a80f;
+}
+
+.prestations h1 {
+  color: #2a4b9b;
+  font-size: 2.5rem;
+}
+
+/* Image CTA */
+.image-cta img {
+  width: 100%;
+  max-height: 500px; /* Limiter la hauteur de l'image */
+  object-fit: cover; /* Garder la proportion de l'image */
+  margin-bottom: 30px;
+}
+
+/* Grid des Prestations */
+.grid-prestations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: start; /* Assure que les cartes commencent au même niveau */
+}
+.prestation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;}
+
+.prestation {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.prestation:hover {
+  transform: scale(1.05);
+}
+
+.prestation img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  flex-grow: 1; /* Permet aux images de s'adapter et de remplir l'espace */
+  object-fit: cover; /* Garde l'image bien proportionnée */
+  max-height: 200px; /* Fixe une hauteur max pour harmoniser */
+}
+
+
+.prestation h2 {
+  color: #2a4b9b;
+  font-size: 1.5rem;
+  .prestation h2 {
+    flex-grow: 0; /* Garde le titre à sa place */
+  }
+}
+
+.prestation button {
+  background-color: #2a4b9b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.prestation button:hover {
+  background-color: #1e3775;
+}
+
+/* Modales */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.gallery img {
+  width: 100%;
+  max-height: 200px;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+.gallery img {
+  width: 100%;
+  max-height: 200px;
+  margin: 5px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: #2a4b9b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-cta img {
+      max-height: 300px; /* Ajuste la taille de l'image CTA sur mobile */
+  }
+
+  .prestations h1 {
+      font-size: 2rem; /* Ajuste la taille du titre sur mobile */
+  }
+
+  .prestation h2 {
+      font-size: 1.2rem; /* Ajuste la taille des titres des prestations sur mobile */
+  }
+
+  .modal-content {
+      width: 90%; /* Agrandir la modale sur mobile */
+  }
+}

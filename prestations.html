@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Prestations</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="ressources/canopées logo.webp" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="projects.html">Réalisations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="prestations">
+            <h1>Nos Prestations</h1>
+            <div class="image-cta">
+                <img src="ressources/cta_image.jpg" alt="Image CTA">
+            </div>
+            <div class="grid-prestations">
+                <div class="prestation" >
+                    <img src="ressources/alice in wonderland tree.jpg" alt="Conception et réalisation d’espaces verts">
+                    <h2>Conception & Réalisation</h2>
+                    <button id="btn1">Voir plus</button>
+                </div>
+                <div class="prestation">
+                    <img src="ressources/parc etang.jpg" alt="Entretien des espaces verts">
+                    <h2>Entretien des espaces verts</h2>
+                    <button onclick="openModal(2)">Voir plus</button>
+                </div>
+                <div class="prestation">
+                    <img src="ressources/haies bien taillées.jpg" alt="Taille des haies">
+                    <h2>Taille des haies</h2>
+                    <button onclick="openModal(3)">Voir plus</button>
+                </div>
+                <div class="prestation">
+                    <img src="ressources/homme qui elage.jpg" alt="Élagage et abattage d’arbres">
+                    <h2>Élagage & Abattage</h2>
+                    <button onclick="openModal(4)">Voir plus</button>
+                </div>
+                <div class="prestation">
+                    <img src="ressources/green-stuff-7276322_1280.jpg" alt="Valorisation des déchets verts">
+                    <h2>Valorisation des déchets verts</h2>
+                    <button onclick="openModal(5)">Voir plus</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modales -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(1)">&times;</span>
+            <h2>Conception & Réalisation</h2>
+            <div class="gallery"></div>
+            <img src="ressources/wooden-bridge-3344449_1280.jpg" alt="Conception et réalisation">
+            <p>Description détaillée ici...</p>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(2)">&times;</span>
+            <h2>Entretien des espaces verts</h2>
+            <img src="ressources/suzhou-3523334_1280.jpg" alt="Entretien des espaces verts">
+            <p>Description détaillée ici...</p>
+        </div>
+    </div>
+
+    <!-- Ajoute les autres modales ici -->
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Canopées. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("JavaScript chargé !");
+        });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>
+       
