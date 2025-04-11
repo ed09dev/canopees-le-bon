@@ -1,16 +1,210 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 /* Page Qui sommes-nous */
-.about-section {
-    padding: 50px;
-    background-color: #f1f1f1;
+.navbar-nav .nav-link {
+    color: #da4d66; /* Rose de la charte */
+    margin-right: 15px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.about-section h1 {
-    color: #2a4b9b;
-    font-size: 2.5rem;
+/* Effet de survol */
+.navbar-nav .nav-link:hover {
+    color: #f1a80f; /* Orange de la charte au survol */
+    text-decoration: underline;
 }
 
-.about-text {
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #f1a80f;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: #f1a80f;
+    text-decoration: none;
+}
+
+/* Menu hamburger */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #f1a80f;
+}
+
+.who-we-are h1 {
+    text-align: center;
+    color: #f1a80f;
+    font-size: 3rem;
+    margin: 20px;
+    padding: 20px 0;
+}
+
+.who-we-are .image-container img {
+    width: 70%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    margin: 20px auto;
+}
+
+.who-we-are .description {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    padding: 0 20px;
+}
+
+main, section {
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.our-story h2 {
+    color: #f1a80f;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 3rem;
+}
+
+.our-story p {
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bio-text {
+    color: black;
     font-size: 1.2rem;
     line-height: 1.6;
-    color: #333;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+   padding: 50px 0;
+}
+
+h2 {
+    color: #f1a80f;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    color: black;
+}
+
+body.about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Media queries pour mobile et tablette */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .who-we-are h1 {
+        font-size: 2.5rem;
+    }
+
+    .who-we-are .image-container img {
+        width: 80%;
+        height: 300px;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .our-story h2 {
+        font-size: 1.5rem;
+    }
+
+    .our-story p {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .who-we-are h1 {
+        font-size: 2rem;
+    }
+
+    .bio-text {
+        font-size: 1rem; /* Ajuste la taille de la police pour les petits écrans */
+        padding: 10px; /* Réduit le padding pour que le texte tienne mieux */
+    }
+}
+.custom-footer {
+    background: linear-gradient(to right, #2a4b9b, #692b85, #da4d66, #b23b53);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  .custom-footer a {
+    color: #f1a80f; /* Jaune charte */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-footer a:hover {
+    color: #da4d66; /* Rose charte */
+    text-decoration: underline;
+  }
+  .text-green-charte {
+    color: #098136; /* Vert charte */
+    font-weight: bold;
+  }
+  .footer-logo {
+    max-height: 60px; /* ajuste selon ta taille idéale */
+    object-fit: contain;
+    margin-right: 0; /* supprime toute marge à droite */
+  }
+  .custom-footer {
+    min-height: 150px; /* ou ce que tu veux */
+    width: 100%;
+    background: linear-gradient(to right, #2a4b9b, #692b85, #da4d66, #b23b53);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
 }

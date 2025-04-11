@@ -1,0 +1,155 @@
+/* Applique un fond de couleur fixe inspiré du header avec plus de jaune et un peu de vert */
+body {
+   
+    background: linear-gradient(to right, #f1a80f, #da4d66, #b23b53, #098136); /* Jaune, rose, rouge et un peu de vert */
+    background-attachment: fixed; /* Fond fixe */
+    color: #2a4b9b; /* Texte en bleu (bleu de la charte) */
+  }
+
+/* Bandeau de la section Tarifs */
+.tarifs .hero {
+    background-color: linear-gradient(to right, #f1a80f, #da4d66, #b23b53, #098136);
+    text-align: center;
+    padding: 50px 0;
+    position: relative; /* Nécessaire pour le positionnement absolu des images */
+    overflow: hidden; /* Évite que les images débordent */
+  }
+  
+  /* Titre H1 */
+  .tarifs h1 {
+    color: #f1a80f; 
+    font-size: 3rem;
+    margin: 0;
+    z-index: 1; /* S'assurer que le texte reste au-dessus des images */
+  }
+  
+  /* Images décoratives */
+  .img-deco {
+    position: absolute;
+    top: 0; /* Aligner en haut */
+    bottom: 0; /* Prendre toute la hauteur de la section */
+    z-index: 0; /* Les images seront derrière le texte */
+  }
+  
+  /* Image décorative de gauche */
+  .img-deco.left {
+    left: 0; /* Coller au bord gauche */
+    width: auto; /* Laisser la largeur s'adapter */
+    height: 100%; /* Prendre toute la hauteur de la section */
+  }
+  
+  /* Image décorative de droite */
+  .img-deco.right {
+    right: 0; /* Coller au bord droit */
+    width: auto; /* Largeur s'adapte à l'image */
+    height: 100%; /* Prendre toute la hauteur de la section */
+  }
+  /* Tableau des tarifs */
+table {
+    width: 50%; /* Réduit la largeur du tableau pour plus d'espace sur les côtés */
+    margin: 40px auto; /* Ajoute de la marge au-dessus et le centre horizontalement */
+    border-collapse: collapse;
+    background-color: #f1a80f; /* Orange charte */
+  }
+  
+  th, td {
+    padding: 25px; /* Augmente un peu le padding pour rendre le texte plus lisible */
+    text-align: center;
+    border: 1px solid #2a4b9b; /* Bordure bleue charte */
+    font-weight: bold; /* Texte en gras */
+    color: #000; /* Texte en noir */
+  }
+  
+  th {
+    background-color: #692b85; /* Mauve charte */
+  }
+  
+  tr:nth-child(even) {
+    background-color: #2a4b9b; /* Bleu charte pour les lignes paires */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #f1a80f
+  }
+  
+  td {
+    background-color: #692b85; /* Rose charte pour les cellules */
+  }
+  
+
+
+  /* Survol des lignes */
+  .table tr:hover {
+    background-color: #2a4b9b; /* Bleu charte */
+    color: #da4d66;
+  }
+  
+  /* Ajout de l'effet sur les cellules au survol */
+  .table td:hover {
+    background-color: #692b85; /* Mauve pour survol des cellules */
+    color: #b23b53
+  }
+  /* Bandeau mauve */
+.devis-section {
+    background-color: #2a4b9b; 
+    margin-top: 60px; /* Espace au-dessus de la section */
+  }
+  
+  .devis-section h2 {
+    color: #da4d66 !important; /* Rose charte */
+    font-size: 2rem;
+  }
+  
+  .btn-contact {
+    background-color: #098136; /* Vert charte */
+    color: #f1a80f; /* Orange charte pour le texte du bouton */
+    padding: 10px 20px; /* Ajoute du padding pour un bouton plus large */
+    border-radius: 30px; /* Bordure arrondie */
+    font-weight: bold; /* Texte en gras */
+    text-decoration: none; /* Supprime le soulignement */
+    display: inline-block; /* Pour que le bouton se comporte bien */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .btn-contact:hover {
+    background-color: #f1a80f; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Effet de zoom au survol */
+  }
+
+.custom-footer {
+  background: linear-gradient(to right, #2a4b9b, #692b85, #da4d66, #b23b53);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.custom-footer a {
+  color: #f1a80f; /* Jaune charte */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.custom-footer a:hover {
+  color: #da4d66; /* Rose charte */
+  text-decoration: underline;
+}
+.text-green-charte {
+  color: #098136; /* Vert charte */
+  font-weight: bold;
+}
+.footer-logo {
+  max-height: 60px; /* ajuste selon ta taille idéale */
+  object-fit: contain;
+  margin-right: 0; /* supprime toute marge à droite */
+}

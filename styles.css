@@ -1,58 +1,77 @@
-/* Global Styles */
+* Global Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  min-height: 100vh; /* Assure que la page prend toute la hauteur */
 }
 
-/* Header */
-header {
-  background-color: #2a4b9b;
-  padding: 20px 0;
-}
-
-nav {
+/* Dégradé chaud et harmonieux sans bleu ni vert, avec inversion des couleurs */
+.custom-header {
+  background: linear-gradient(to right, #b23b53, #da4d66, #692b85); /* Inversion des couleurs */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 15px 0; /* Ajuste les marges selon ton besoin */
+  position: relative;
 }
 
-.logo img {
-  max-width: 200px; /* Restriction de la taille du logo */
-  height: auto;
+/* Recadrage et centrage du logo */
+.logo-header {
+  height: 45px;
+  margin-top: 5px;
+  position: relative; /* Changement de absolute à relative */
+  top: 50%;
+  transform: translateY(-50%); /* Centre le logo verticalement */
 }
 
-ul {
-  display: flex;
-  gap: 20px;
+/* Style des liens du header */
+.custom-nav-link {
+  color: #f1a80f !important; /* Orange charte */
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-ul li a {
-  color: white;
+.custom-nav-link:hover {
+  color: #da4d66 !important; /* Rose charte */
   text-decoration: none;
-  font-size: 1.1rem;
+  font-weight: 600; /* Légèrement plus audacieux pour l'effet de survol */
+}
+
+/* Pour garantir que la navigation reste alignée */
+.custom-nav {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 80px; /* Ajuste selon la largeur de ton logo */
+}
+
+/* Applique un fond de couleur fixe inspiré du header avec plus de jaune et un peu de vert */
+body {
+  background-color: #f1a80f; /* Jaune de la charte */
+  background: linear-gradient(to right, #f1a80f, #da4d66, #b23b53, #098136); /* Jaune, rose, rouge et un peu de vert */
+  background-attachment: fixed; /* Fond fixe */
+  color: #2a4b9b; /* Texte en bleu (bleu de la charte) */
+}
+
+/* Style du footer (exclure le fond orange) */
+footer {
+  background-color: #2a4b9b; /* Couleur du footer */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 30px; /* Assure que le footer ne soit pas trop proche du reste du contenu */
 }
 
 /* Prestations */
-.prestations {
-  text-align: center;
-  padding: 50px;
-  background-color: #f1a80f;
-}
 
 .prestations h1 {
   color: #2a4b9b;
   font-size: 2.5rem;
-}
-
-/* Image CTA */
-.image-cta img {
-  width: 100%;
-  max-height: 500px; /* Limiter la hauteur de l'image */
-  object-fit: cover; /* Garder la proportion de l'image */
-  margin-bottom: 30px;
 }
 
 /* Grid des Prestations */
@@ -63,14 +82,8 @@ ul li a {
   padding: 20px;
   align-items: start; /* Assure que les cartes commencent au même niveau */
 }
-.prestation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;}
 
 .prestation {
-  background-color: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -85,104 +98,65 @@ ul li a {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  flex-grow: 1; /* Permet aux images de s'adapter et de remplir l'espace */
-  object-fit: cover; /* Garde l'image bien proportionnée */
   max-height: 200px; /* Fixe une hauteur max pour harmoniser */
 }
 
-
-.prestation h2 {
-  color: #2a4b9b;
-  font-size: 1.5rem;
-  .prestation h2 {
-    flex-grow: 0; /* Garde le titre à sa place */
-  }
+.card-img-top {
+  height: 500px; /* ajuste si besoin */
+  object-fit: cover;
 }
 
-.prestation button {
-  background-color: #2a4b9b;
+.fake-btn {
+  background-color: #f1a80f; /* jaune charte */
   color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: auto;
-}
-
-.prestation button:hover {
-  background-color: #1e3775;
-}
-
-/* Modales */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-}
-.gallery img {
-  width: 100%;
-  max-height: 200px;
-  margin: 5px 0;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 500px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
   text-align: center;
-}
-.gallery img {
-  width: 100%;
-  max-height: 200px;
-  margin: 5px 0;
-  border-radius: 10px;
-  cursor: pointer;
+  font-weight: 500;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
 
-
-
-.close {
-  float: right;
-  font-size: 28px;
-  cursor: pointer;
+.fake-btn:hover {
+  transform: scale(1.02); /* petit effet subtil comme un vrai bouton */
 }
 
-/* Footer */
-footer {
-  background-color: #2a4b9b;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
+.custom-footer {
+  background: linear-gradient(to right, #2a4b9b, #692b85, #da4d66, #b23b53);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .image-cta img {
-      max-height: 300px; /* Ajuste la taille de l'image CTA sur mobile */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
   }
-
-  .prestations h1 {
-      font-size: 2rem; /* Ajuste la taille du titre sur mobile */
+  50% {
+    background-position: 100% 100%;
   }
-
-  .prestation h2 {
-      font-size: 1.2rem; /* Ajuste la taille des titres des prestations sur mobile */
-  }
-
-  .modal-content {
-      width: 90%; /* Agrandir la modale sur mobile */
+  100% {
+    background-position: 0% 0%;
   }
 }
+.custom-footer a {
+  color: #f1a80f; /* Jaune charte */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.custom-footer a:hover {
+  color: #da4d66; /* Rose charte */
+  text-decoration: underline;
+}
+.text-green-charte {
+  color: #098136; /* Vert charte */
+  font-weight: bold;
+}
+.footer-logo {
+  max-height: 60px; /* ajuste selon ta taille idéale */
+  object-fit: contain;
+  margin-right: 0; /* supprime toute marge à droite */
+}
+

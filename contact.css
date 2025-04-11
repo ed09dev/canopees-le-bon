@@ -1,0 +1,127 @@
+/* S'assurer que le body et html prennent toute la hauteur */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Utiliser un flexbox pour que le contenu principal occupe l'espace restant */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenu principal */
+.main-content {
+  flex-grow: 1;
+}
+
+.custom-footer {
+  background: linear-gradient(to right, #2a4b9b, #692b85, #da4d66, #b23b53);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Ajoute cette ligne */
+}
+
+/* Animation du gradient du footer */
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+/* Liens du footer */
+.custom-footer a {
+  color: #f1a80f; /* Jaune charte */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.custom-footer a:hover {
+  color: #da4d66; /* Rose charte */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .custom-footer {
+      padding: 15px 10px;
+      text-align: center;
+  }
+}
+
+/* Espacement des sections */
+.contact-box {
+  background-color: #fff0f5; /* fond très léger rose/mauve */
+  border: 2px solid #da4d66; /* rose charte */
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* On s'assure qu'il y a de l'espace avant le footer */
+}
+
+.localisation-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.fake-map-container {
+  max-width: 550px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.fake-map-header {
+  background: linear-gradient(135deg, #da4d66, #692b85); /* Rose ➜ Mauve */
+  color: white;
+  font-size: 1.3em;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.fake-map-body {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(50%);
+}
+
+.map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  transform: translate(-50%, -100%);
+}
+
+.fake-map-footer {
+  padding: 10px;
+  background-color: #f1a80f; /* Orange charte */
+  color: #2a4b9b; /* Bleu charte */
+  font-weight: bold;
+}
+
+h2 + p {
+  font-size: 1.2em; /* Augmente la taille de la police */
+  font-weight: bold; /* Met le texte en gras */
+}

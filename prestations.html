@@ -1,95 +1,229 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Prestations</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nos Prestations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="ressources/canopées logo.webp" alt="Logo">
-            </div>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="about.html">Qui sommes-nous</a></li>
-                <li><a href="projects.html">Réalisations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="prestations">
-            <h1>Nos Prestations</h1>
-            <div class="image-cta">
-                <img src="ressources/cta_image.jpg" alt="Image CTA">
-            </div>
-            <div class="grid-prestations">
-                <div class="prestation" >
-                    <img src="ressources/alice in wonderland tree.jpg" alt="Conception et réalisation d’espaces verts">
-                    <h2>Conception & Réalisation</h2>
-                    <button id="btn1">Voir plus</button>
-                </div>
-                <div class="prestation">
-                    <img src="ressources/parc etang.jpg" alt="Entretien des espaces verts">
-                    <h2>Entretien des espaces verts</h2>
-                    <button onclick="openModal(2)">Voir plus</button>
-                </div>
-                <div class="prestation">
-                    <img src="ressources/haies bien taillées.jpg" alt="Taille des haies">
-                    <h2>Taille des haies</h2>
-                    <button onclick="openModal(3)">Voir plus</button>
-                </div>
-                <div class="prestation">
-                    <img src="ressources/homme qui elage.jpg" alt="Élagage et abattage d’arbres">
-                    <h2>Élagage & Abattage</h2>
-                    <button onclick="openModal(4)">Voir plus</button>
-                </div>
-                <div class="prestation">
-                    <img src="ressources/green-stuff-7276322_1280.jpg" alt="Valorisation des déchets verts">
-                    <h2>Valorisation des déchets verts</h2>
-                    <button onclick="openModal(5)">Voir plus</button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Modales -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal(1)">&times;</span>
-            <h2>Conception & Réalisation</h2>
-            <div class="gallery"></div>
-            <img src="ressources/wooden-bridge-3344449_1280.jpg" alt="Conception et réalisation">
-            <p>Description détaillée ici...</p>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top custom-header">
+      <div class="container-fluid px-0">
+        <a class="navbar-brand ms-0" href="index.html">
+          <img src="assets/logo-canopees.png" alt="Logo Canopées" class="logo-header">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="index.html#accueil">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="qui-sommes-nous.html">Qui sommes nous ?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="prestations.html">Prestations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="tarifs.html">Tarifs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-nav-link" href="contacts.html">Contacts</a>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <h1 class="text-center text-primary mb-4">Nos Prestations</h1>
+    <div class="row g-4">
+
+      <!-- Prestation 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ressources/alice in wonderland tree.jpg" class="card-img-top" alt="Conception et réalisation">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Conception & Réalisation</h5>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modal1">Voir plus</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prestation 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ressources/parc etang.jpg" class="card-img-top" alt="Entretien des espaces verts">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Entretien des espaces verts</h5>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modal2">Voir plus</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prestation 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ressources/haies modernes.jpg" class="card-img-top" alt="Taille des haies">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Taille des haies</h5>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modal3">Voir plus</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prestation 4 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ressources/homme qui elage.jpg" class="card-img-top" alt="Élagage et abattage">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Élagage & Abattage</h5>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modal4">Voir plus</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prestation 5 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="ressources/green-stuff-7276322_1280.jpg" class="card-img-top" alt="Valorisation des déchets verts">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Valorisation des déchets verts</h5>
+            <button class="btn btn-warning mt-auto" data-bs-toggle="modal" data-bs-target="#modal5">Voir plus</button>
+          </div>
+        </div>
+      </div>
+     <!-- Carte 6 factice pour combler la grille -->
+<div class="col-md-4">
+  <div class="card h-100">
+    <img src="ressources/realisation flower roof.jpg" class="card-img-top" alt="Inspiration nature">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Inspiration & Créativité</h5>
+      <div class="fake-btn mt-auto"></div>
+        Découvrez l’univers végétal qui nous inspire chaque jour
+      </div>
+  </div>
+</div>
     
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal(2)">&times;</span>
-            <h2>Entretien des espaces verts</h2>
-            <img src="ressources/suzhou-3523334_1280.jpg" alt="Entretien des espaces verts">
-            <p>Description détaillée ici...</p>
+  </main>
+
+  <!-- Modales Bootstrap -->
+  <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Conception & Réalisation</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
+        <div class="modal-body">
+          <img src="ressources/chemin violet rose.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/wooden-bridge-3344449_1280.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/columns-4595360_1280.jpg" class="img-fluid mb-3" alt="">
+             <p></p>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <!-- Ajoute les autres modales ici -->
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Canopées. Tous droits réservés.</p>
+  <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Entretien des espaces verts</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
         </div>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("JavaScript chargé !");
-        });
-    </script>
-    <script src="script.js" defer></script>
+        <div class="modal-body">
+          <img src="ressources/gardens-717425_1280.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/gardens-of-the-world-4999366_1280.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/bed-117336_1280.jpg" class="img-fluid mb-3" alt="">
+          <p>Description détaillée ici...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">taille des haies</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="ressources/haies bien taillées.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/haies particuliers.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/haies porte.jpg" class="img-fluid mb-3" alt="">
+          <p>Description détaillée ici...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Elagage et abattage</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="ressources/arbre renversé.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/COURANT-CORDE-ELAGAGE-1.png" class="img-fluid mb-3" alt="">
+          <img src="ressources/troncon bois2.jpg" class="img-fluid mb-3" alt="">
+          <p>Description détaillée ici...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Valorisation des déchets verts</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <img src="ressources/compast fall.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/compost-419261_1280.jpg" class="img-fluid mb-3" alt="">
+          <img src="ressources/compost ecorces.jpg" class="img-fluid mb-3" alt="">
+             <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="custom-footer py-5">
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <!-- Texte centré -->
+            <div class="col-md-10 text-center">
+              <p class="mb-3 text-green-charte">
+                &copy; Société Canopées Espaces Verts, Jardins de la Tour Eiffel, 75000 Paris.
+              </p>
+              <ul class="list-unstyled d-flex justify-content-center mb-0 footer-links">
+                <li class="mx-3"><a href="#CGU">CGU</a></li>
+                <li class="mx-3"><a href="#CGV">CGV</a></li>
+                <li class="mx-3"><a href="#MENTIONS LEGALES">Mentions légales</a></li>
+              </ul>
+            </div>
+      
+            <!-- Logo à droite -->
+            <div class="col-md-2 d-flex justify-content-end p-0">
+              <img src="assets/logo-canopees.png" alt="Logo de la société" class="footer-logo">
+            </div>
+      
+          </div>
+        </div>
+      </footer>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-       
